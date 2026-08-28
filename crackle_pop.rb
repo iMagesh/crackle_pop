@@ -15,9 +15,12 @@ end
 def crackle_pop(first = 1, last = 100)
   return [] if first > last
 
-  first.upto(last).map do |number|
+  results = []
+  (first..last).each do |number|
     result = code_for(number)
     puts result
-    result
+    results << result
   end
+
+  results
 end
