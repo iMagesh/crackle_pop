@@ -47,4 +47,7 @@ def run_tests
 end
 
 # Run the test suite if executing this file directly
-run_tests if __FILE__ == $0
+if __FILE__ == $0
+  run_tests
+  exit 1 if @failed_tests.positive?
+end
